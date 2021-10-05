@@ -1,0 +1,72 @@
+\documentclass[a4j,10pt]{jarticle}
+
+\title{タイトル}
+\author{dokaraya}
+\date{\today}
+
+\usepackage{fancyheadings}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{amsmath}
+
+% スタイルファイル
+\usepackage{siunitx}
+\usepackage{bm}
+\usepackage{listings}
+\usepackage{comment}
+\usepackage{algorithm}
+\usepackage[noend]{algorithmic}
+\usepackage{url}
+\usepackage{here}
+\renewcommand{\lstlistingname}{ソースコード}
+\lstset{
+    frame=single,
+    numbers=left,
+    tabsize=2,
+    language=c++,
+    basicstyle={\scriptsize}
+}
+
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+\makeatletter
+\renewcommand{\ALG@name}{アルゴリズム}
+\makeatother
+
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}
+
+\begin{document}
+	\maketitle
+  \section{内容}
+  犬と猫はかわいいことが知られている．ソースコード\ref{lis:yay}に示すプログラムを用いて，犬と猫の反応を観察した．その反応の例を図\ref{fig:cat}に示す．\par
+  これらの反応を200人に見せてどちらがかわいいか選んでもらった．その結果を表\ref{tab:example}に示す．よってどちらもかわいいことがわかった．
+
+  \begin{lstlisting}[caption = Yayするプログラム, label = lis:yay]
+  fun main(){
+    print("Yay!")
+  }
+  \end{lstlisting}
+
+  \begin{figure}
+    \centering
+    \includegraphics[width=9cm]{fig/img.jpg}
+    \caption{素晴らしき猫}
+    \label{fig:cat}
+  \end{figure}
+
+  \begin{table}[t]
+    \caption{かわいさ投票の結果}
+    \label{tab:example}
+    \centering
+    \begin{tabular}{cr}
+      \hline
+      種類 & かわいさ(票)\\ \hline
+      犬 & 100\\
+      猫 & 100\\ \hline
+      総数 & 200 \\ \hline
+    \end{tabular}
+  \end{table}
+\end{document}
