@@ -1,7 +1,7 @@
 # LaTeX-templates
 - よく使っているLaTeXのテンプレートです．
 
-## LaTeX
+## LaTeX (直下)
 - 文書の作成に用います．
 
 ## + BiBTeX
